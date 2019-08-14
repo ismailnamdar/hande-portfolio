@@ -31,3 +31,13 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'Marbre Sans';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Marbre Sans'),
+    local('MarbreSans'),
+    url('./assets/Marbre_Sans.otf') format('opentype');
+}
