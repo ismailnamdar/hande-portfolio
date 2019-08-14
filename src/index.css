@@ -16,3 +16,8 @@ code {
   font-family: 'MyFont';
   src: local('MyFont'), url(./assets/Stackyard.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: local('CaviarDreams'), url(./assets/CaviarDreams.ttf) format('truetype');
+}
