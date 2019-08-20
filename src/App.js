@@ -3,9 +3,9 @@ import { ThemeProvider } from "styled-components";
 import AppRouter from "./views/AppRouter";
 
 const theme = {
-  primaryColor: "rgba(195,157,24,0.85)",
-  secondaryColor: "#851e3e",
-  thirdColor: "#031022"
+  primaryColor: "rgb(243,60,67)",
+  secondaryColor: "#F5BB06",
+  thirdColor: "#fffff6"
 };
 
 function App() {

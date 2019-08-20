@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.png";
-import profile from "../assets/profile.png";
 
 const StyledDiv = styled.div`
 	display: flex;
@@ -16,10 +15,10 @@ const StyledDiv = styled.div`
   background-size: 100%;
 `;
 const StyledSpan = styled.span`
-	margin-top: 1em;
 	font-size: 84px;
 	font-weight: 200;
 	font-family: MyFont;
+	text-align: center;
 	color: ${props => props.theme.secondaryColor}
 `;
 const StyleImg = styled.img`
@@ -36,16 +35,19 @@ const StyledBottomDiv = styled.div`
 `;
 const StyledDescriptionSpan = styled.span`
 	padding: 0.5em;
+	color: ${props => props.theme.thirdColor};
 	font-family: MyFont;
-	font-size: 36px;
+	font-size: 32px;
 	float: right;
 `;
 const StyledContentSpan = styled.span`
 	padding: 0.5em;
 	width: 400px;
-	font-family: Caviar Dreams;
+	font-family: Century Gothic;
 	font-weight: 400;
 	font-size: 18px;
+	text-align: center;
+	color: ${props => props.theme.thirdColor};
 	float: right;
 `;
 
@@ -54,21 +56,29 @@ const ProfileImage = styled.img`
 	height: ${props => props.height}px;
 	border-radius: ${props => props.height / 2}px;
 	margin: ${props => props.margin || 0};
-	box-shadow: 0px 0px 100px 36px white;
+	box-shadow: 0px 0px 30px 2px white;
 `;
 const Home = () => {
-	return <StyledDiv backgroundImageUrl={process.env.PUBLIC_URL + "/mik.jpg"}>
-		<div style={{ display: "flex", flexDirection: "row", alignItems: "center", marginRight: "60px"}}>
-			<ProfileImage src={profile} height={400} width={400} margin={"60px 90px 0px 0px"}/>
-			<div style={{ display: "flex", flexDirection: "column" }}>
+	return <StyledDiv backgroundImageUrl={process.env.PUBLIC_URL + "bsf.jpg"}>
+		<div style={{
+			display: "flex",
+			flexDirection: "row",
+			alignItems: "center",
+			justifyContent: "center",
+			marginRight: "60px",
+			flexWrap: 'wrap',
+			marginTop: 90
+		}}>
+			<ProfileImage src={"cv.jpg"} height={400} width={400} margin={"0px 90px 0 0"}/>
+			<div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
 				<StyledSpan>Hande Hamamcı</StyledSpan>
 				<div>
 					<StyledDescriptionSpan>Textile Engineer</StyledDescriptionSpan>
 				</div>
 				<StyledContentSpan>
 					My name is Hande.<br/>
-				  I am a student of Istanbul Technical University. <br/>
-				  I live in Istanbul, Turkey.</StyledContentSpan>
+					I am a student of Istanbul Technical University. <br/>
+					I live in Istanbul, Turkey.</StyledContentSpan>
 			</div>
 		</div>
 		<StyledBottomDiv>
