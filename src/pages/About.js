@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
 	background: ${props => props.theme.thirdColor} url(${props => props.backgroundImageUrl});
 	background-color: ${props => props.theme.fourthColor};
   background-position: top right;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 100%;
 `;
 const StyledH1 = styled.h1`
@@ -43,7 +43,7 @@ const About = () => {
 			<span>Name&Surname: Hande Hamamci</span>
 			<span>Birthdate: 02.01.1998</span>
 			<span>Birthplace: Istanbul, Turkey</span>
-			<span>Marital Status: Married</span>
+			<span>Marital Status: Single</span>
 			<span>Driving Licence: B</span>
 		</StyledList>
 		<StyledH1>Education</StyledH1>
