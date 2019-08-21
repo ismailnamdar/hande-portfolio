@@ -16,8 +16,8 @@ const Nav = styled.ul`
 		padding: 14px 16px;
 		font-family: Arial;
 		&:hover {
-			 background-color: ${(props) => props.theme.primaryColor};
-    	color: white;
+			background-color: ${(props) => props.theme.secondaryColor};
+    	color: ${(props) => props.theme.fourthColor};
 		}
   }
 `;
