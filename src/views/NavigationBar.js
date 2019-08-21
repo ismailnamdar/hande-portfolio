@@ -31,8 +31,8 @@ const NavItem = styled.li`
  * @constructor
  */
 const NavigationBar = () => <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}><Nav>
-	{routes.map(({name, path}) =>
-		name != null && <NavItem key={name + path}><Link key={path} to={path}>{name}</Link></NavItem>)}
+	{routes.map(({name, path, Custom }) =>
+		name != null && <NavItem key={name + path}>{Custom == null ? <Link key={path} to={path}>{name}</Link> : Custom}</NavItem>)}
 </Nav></div>;
 
 export default NavigationBar;

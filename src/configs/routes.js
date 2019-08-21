@@ -1,5 +1,5 @@
 import React, { lazy } from "react";
-
+import cv from "../assets/cv.pdf";
 const Home = lazy(() => import('../pages/Home'));
 
 const routes = [
@@ -10,16 +10,10 @@ const routes = [
 		Component: Home
 	},
 	{
-		name: "Portfolio",
-		path: "/portfolio",
+		name: "CV",
+		path: "/cv",
 		exact: true,
-		Component: <div></div>
-	},
-	{
-		name: "Experience",
-		path: "/experience",
-		exact: true,
-		Component: <div></div>
+		Custom: <a href={cv} target={"_blank"}>CV</a>
 	},
 	{
 		name: "About",
