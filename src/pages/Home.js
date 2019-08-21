@@ -10,6 +10,7 @@ const StyledDiv = styled.div`
   height: 100vh;
   padding-top: 50px;
 	background: ${props => props.theme.thirdColor} url(${props => props.backgroundImageUrl});
+  background-color: ${props => props.theme.fourthColor};
   background-position: top right;
   background-repeat: no-repeat;
   background-size: 100%;
