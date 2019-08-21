@@ -10,6 +10,7 @@ const Nav = styled.ul`
   margin: 0;
   padding: 0;
   a {
+  	color: ${(props) => props.theme.secondaryColor};
     text-decoration: none;
     display: block;
 		text-align: center;
@@ -25,15 +26,29 @@ const Nav = styled.ul`
 const NavItem = styled.li`
 	float: left;
 `;
+const handleStyle = (isActive) => {
+	return isActive ? { color: theme.fourthColor, backgroundColor: theme.secondaryColor } : {};
+};
 /**
  * contains localization toggle item and routes
  * @returns {*}
  * @constructor
  */
 const NavigationBar = ({ match, location, history } ) => {
+
 	return <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}><Nav>
-		{routes.map(({name, path, Custom }) =>
-			name != null && <NavItem key={name + path}>{Custom == null ? <Link key={path} to={path} style={{color: path === location.pathname ? theme.fourthColor : theme.secondaryColor, backgroundColor: path === location.pathname && theme.secondaryColor }}>{name}</Link> : Custom(path === location.pathname)}</NavItem>)}
+		{routes.map(({name, path, Custom }) => {
+			if(name != null) {
+				return <NavItem key={name + path}>
+					{Custom == null ?
+						<Link
+							key={path}
+							to={path}
+							style={handleStyle(path === location.pathname)}>
+							{name}
+						</Link> : Custom(path === location.pathname)}</NavItem>;
+			}
+			})}
 	</Nav></div>
 };
 
