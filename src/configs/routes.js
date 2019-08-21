@@ -3,6 +3,7 @@ import cv from "../assets/cv.pdf";
 import {theme} from "../constants";
 const Home = lazy(() => import('../pages/Home'));
 const About = lazy(() => import('../pages/About'));
+const Contacts = lazy(() => import('../pages/Contacts'));
 
 const routes = [
 	{
@@ -27,7 +28,7 @@ const routes = [
 		name: "Contacts",
 		path: "/contacts",
 		exact: true,
-		Component: Home
+		Component: Contacts
 	}
 ];
 
