@@ -1,5 +1,6 @@
 import React, { lazy } from "react";
 import cv from "../assets/cv.pdf";
+import {theme} from "../constants";
 const Home = lazy(() => import('../pages/Home'));
 
 const routes = [
@@ -13,19 +14,19 @@ const routes = [
 		name: "CV",
 		path: "/cv",
 		exact: true,
-		Custom: <a href={cv} target={"_blank"}>CV</a>
+		Custom: (isActive) => <a href={cv} target={"_blank"} style={{color: isActive ? theme.fourthColor : theme.secondaryColor, backgroundColor: isActive && theme.secondaryColor }}>CV</a>
 	},
 	{
 		name: "About",
 		path: "/about",
 		exact: true,
-		Component: <div></div>
+		Component: Home
 	},
 	{
 		name: "Contacts",
 		path: "/contacts",
 		exact: true,
-		Component: <div></div>
+		Component: Home
 	}
 ];
 
