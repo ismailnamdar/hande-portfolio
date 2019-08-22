@@ -36,11 +36,8 @@ const handleStyle = (isActive) => {
  * @constructor
  */
 const NavigationBar = ({ match, location, history } ) => {
-	return <Anime easing="linear"
-								duration={1000}
-								direction="alternate"
-								loop={false}
-								translateX={["10rem", "0rem"]}><div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}><Nav>
+	console.log("Nav");
+	return <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}><Nav>
 		{routes.map(({name, path, Custom }) => {
 			if(name != null) {
 				return <NavItem key={name + path}>
@@ -54,7 +51,7 @@ const NavigationBar = ({ match, location, history } ) => {
 			}
 			return <></>;
 			})}
-	</Nav></div></Anime>
+	</Nav></div>
 };
 
 export default withRouter(NavigationBar);
