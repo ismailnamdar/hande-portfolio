@@ -15,9 +15,6 @@ const StyledDiv = styled.div`
 `;
 
 const Cv = () => {
-	const handleClick = () => {
-
-	};
 	return <StyledDiv backgroundImageUrl={process.env.PUBLIC_URL + "bsf.jpg"}>
 		<a><img src={cv} alt="Hande Hamamci Cv" width="600px" height="100%" /></a>
 	</StyledDiv>

@@ -48,6 +48,7 @@ const NavigationBar = ({ match, location, history } ) => {
 							{name}
 						</Link> : Custom(path === location.pathname)}</NavItem>;
 			}
+			return <></>;
 			})}
 	</Nav></div>
 };

@@ -30,7 +30,7 @@ const About = () => {
 		<Header1>Education</Header1>
 		<UList>
 			<span>2017-2020: Istanbul Technical University</span>
-			<span>2015-2016: Private Bogazici Anatolian High School</span>
+			<span>2015-2016: Bogazici Anatolian High School</span>
 			<span>2012-2015: Nevzat Ayaz Anatolian High School</span>
 		</UList>
 		<Header1>Languages</Header1>
