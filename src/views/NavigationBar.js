@@ -3,6 +3,7 @@ import routes from "../configs/routes";
 import {Link, withRouter} from "react-router-dom";
 import styled from "styled-components";
 import {theme} from "../constants";
+import Anime from "react-anime";
 
 const Nav = styled.ul`
 	list-style-type: none;
@@ -35,8 +36,11 @@ const handleStyle = (isActive) => {
  * @constructor
  */
 const NavigationBar = ({ match, location, history } ) => {
-
-	return <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}><Nav>
+	return <Anime easing="linear"
+								duration={1000}
+								direction="alternate"
+								loop={false}
+								translateX={["10rem", "0rem"]}><div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}><Nav>
 		{routes.map(({name, path, Custom }) => {
 			if(name != null) {
 				return <NavItem key={name + path}>
@@ -50,7 +54,7 @@ const NavigationBar = ({ match, location, history } ) => {
 			}
 			return <></>;
 			})}
-	</Nav></div>
+	</Nav></div></Anime>
 };
 
 export default withRouter(NavigationBar);

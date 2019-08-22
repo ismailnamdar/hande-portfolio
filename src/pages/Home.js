@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Anime from "react-anime";
 import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.png";
 
@@ -70,16 +71,43 @@ const Home = () => {
 			flexWrap: 'wrap',
 			marginTop: 90
 		}}>
-			<ProfileImage src={"cv.jpg"} height={400} width={400} margin={"0px 90px 0 0"}/>
+			<Anime easing="easeOutElastic"
+						 duration={4000}
+						 direction="alternate"
+						 loop={false}
+						 delay={(el, index) => index * 240}
+						 scale={[.3, 1]}>
+				<ProfileImage src={"cv.jpg"} height={400} width={400} margin={"0px 90px 0 0"}/>
+			</Anime>
 			<div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-				<StyledSpan>Hande Hamamcı</StyledSpan>
+				<Anime easing="linear"
+							 duration={1000}
+							 direction="alternate"
+							 loop={false}
+							 translateY={["-30rem", "0rem"]}>
+					<StyledSpan>Hande Hamamcı</StyledSpan>
+				</Anime>
 				<div>
-					<StyledDescriptionSpan>Textile Engineer</StyledDescriptionSpan>
+					<Anime easing="linear"
+								 duration={1000}
+								 direction="alternate"
+								 loop={false}
+								 delay={(el, index) => 1000}
+								 opacity={[0, 1]}>
+						<StyledDescriptionSpan>Textile Engineer</StyledDescriptionSpan>
+					</Anime>
 				</div>
+				<Anime easing="linear"
+							 duration={1000}
+							 direction="alternate"
+							 loop={false}
+							 delay={(el, index) => 1000}
+							 opacity={[0, 1]}>
 				<StyledContentSpan>
 					My name is Hande.<br/>
 					I am a student of Istanbul Technical University. <br/>
 					I live in Istanbul, Turkey.</StyledContentSpan>
+				</Anime>
 			</div>
 		</div>
 		<StyledBottomDiv>
